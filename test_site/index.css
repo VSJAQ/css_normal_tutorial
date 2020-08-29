@@ -31,6 +31,7 @@ header .main-wrapper {
 }
 
 .main-menu > ul > li > a {
+    position: relative;
     color: white;
     text-decoration: none;
     font-weight: 400;
@@ -42,4 +43,23 @@ header .main-wrapper {
 
 .main-menu > ul > li:last-child > a {
     margin-right: 0;
+}
+
+.main-menu > ul > li > a::after {
+    content: "";
+    width: 10%;
+    height: 3px;
+    background: #00D5C3;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    top: 25px;
+    opacity: 0;
+    transition-duration: 0.3s;
+}
+
+.main-menu > ul > li > a:hover::after {
+    width: 100%;
+    opacity: 1;
 }
