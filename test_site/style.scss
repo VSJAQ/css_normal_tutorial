@@ -1,5 +1,6 @@
 $darkBlue: #161C35;
 $lazure: #00D5C3;
+$mainTextColor: white;
 
 @mixin forMainWrapper () {
   margin: 0 auto;
@@ -11,6 +12,34 @@ $lazure: #00D5C3;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  color: $mainTextColor;
+  padding: 25px 0 0 30px;
+  margin-bottom: 35px;
+  position: relative;
+  &::before {
+    content: "";
+    top: 0;
+    left: 0;
+    width: 115px;
+    height: 5px;
+    position: absolute;
+    background: $lazure;
+  }
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    height: 115px;
+    width: 5px;
+    position: absolute;
+    background: $lazure;
+  }
 }
 
 body {
@@ -67,6 +96,38 @@ header {
         width: 100%;
         opacity: 1;
       }
+    }
+  }
+}
+
+.main-board {
+  position: relative;
+  height: 500px;
+  background: url(../src/bg.jpg)  50% -50px;
+  background-size: cover;
+  &::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(33, 42, 73, 0.6);
+  }
+
+  .main-wrapper {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    .main-board__left-block {
+      width: 50%;
+    }
+
+    img {
+      margin: auto;
     }
   }
 }
