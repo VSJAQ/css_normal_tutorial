@@ -628,12 +628,14 @@ header {
   input[type="email"]{
     background: transparent;
     border: 1px solid $lazure;
+    border-radius: 5px 0 0 5px;
     color: $mainColor;
     font-size: 18px;
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     padding: 10px;
     width: 450px;
+    margin-left: 5px;
     &:focus {
       border: 1px solid #64ffed;
       outline: none;
@@ -645,6 +647,8 @@ header {
   button {
     background: $lazure;
     border: 1px solid $lazure;
+    border-radius: 0 5px 5px 0;
+    margin-left: -5px;
     color: $mainColor;
     font-size: 22px;
     width: 100px;
@@ -862,6 +866,9 @@ footer {
 
 @media  (max-width: 580px)  {
   .form {
+    background: url(../src/bg.jpg) 50% 50% fixed;
+    background-size: cover;
+
     input[type="email"] {
       width: 80%;
     }
@@ -914,9 +921,12 @@ footer {
   }
   .main-board .main-wrapper {
     .main-board__left-block {
-      .main-board__button-link:first-of-type {
-        margin-right: 0;
-        margin-bottom: 10px;
+      .main-board__button-link {
+        width: 173px;
+        &:first-of-type {
+          margin-right: 0;
+          margin-bottom: 10px;
+        }
       }
     }
   }
