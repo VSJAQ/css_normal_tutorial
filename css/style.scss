@@ -901,6 +901,12 @@ footer {
 }
 
 @media  (max-width: 375px) {
+  .services__block-item {
+    .services__item {
+      min-width: 100%;
+    }
+  }
+
   .main-board__left-block {
     div:last-of-type {
       flex-wrap: wrap;
@@ -912,6 +918,14 @@ footer {
         margin-right: 0;
         margin-bottom: 10px;
       }
+    }
+  }
+}
+
+@media  (max-width: 200px) {
+  .services__block-item {
+    .services__item {
+      min-width: 180px;
     }
   }
 }
